@@ -1,0 +1,200 @@
+/* -------- Google Font -------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #4b0082, #000000);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* -------- TOP BAR -------- */
+.topbar {
+  width: 100%;
+  padding: 15px 25px;
+  background: rgba(20, 0, 40, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px #480094;
+  position: sticky;
+  top: 0;
+}
+
+/* -------- WRAPPER -------- */
+.wrap {
+  width: 90%;
+  max-width: 520px;
+  margin: 30px auto;
+}
+
+/* -------- CARD -------- */
+.card {
+  background: rgba(40, 0, 60, 0.45);
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(185, 120, 255, 0.25);
+  box-shadow: 0 0 12px #6a0dad;
+  animation: fadeIn 0.5s ease;
+}
+
+/* -------- INPUT -------- */
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(200, 150, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+input:focus {
+  border-color: #c785ff;
+  box-shadow: 0 0 8px #be6cff;
+}
+
+/* -------- CHECKBOX FIXED -------- */
+.consent {
+  display: flex;
+  align-items: center;
+  margin-top: 18px;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.consent input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  accent-color: #d38bff;
+  position: relative;
+  top: 1px;
+}
+
+/* -------- BUTTONS -------- */
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 22px;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  transition: 0.25s;
+  color: #fff;
+}
+
+.primary {
+  background: #7a00cc;
+}
+
+.primary:hover:not(:disabled) {
+  background: #9d30ff;
+  box-shadow: 0 0 12px #d69dff;
+}
+
+/* -------- QUIZ SECTION -------- */
+.quiz-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+#timer {
+  padding: 7px 14px;
+  background: #3d0066;
+  border-radius: 8px;
+  box-shadow: 0 0 8px #b041ff;
+}
+#leaderboard {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.leaderboard-row {
+  display: flex;
+  justify-content: space-between; /* pushes name left, score right */
+  padding: 4px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.leaderboard-row .name {
+  font-weight: 500;
+}
+
+.leaderboard-row .score {
+  font-weight: 700;
+}
+
+
+.question {
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+/* -------- OPTION BUTTONS -------- */
+.options button {
+  width: 100%;
+  background: rgba(120, 0, 180, 0.35);
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(200, 120, 255, 0.35);
+  margin: 10px 0;
+  text-align: left;
+  transition: 0.25s;
+}
+
+.options button:hover {
+  background: rgba(180, 0, 255, 0.55);
+  box-shadow: 0 0 10px #cb75ff;
+}
+
+.options button.selected {
+  background: #b020ff;
+  box-shadow: 0 0 14px #e490ff;
+  border-color: #ffb3ff;
+}
+
+/* -------- FOOTER -------- */
+.foot {
+  text-align: center;
+  padding: 15px;
+  color: #bda3ff;
+  margin-top: auto;
+}
+
+/* HIDDEN */
+.hidden {
+  display: none;
+}
+button {
+  background: #0057ff;
+  color: #fff !important;     /* <-- ensures text is visible */
+  font-size: 16px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+}
+
+button:disabled {
+  background: #cccccc;
+  color: #555 !important;
+  cursor: not-allowed;
+}
