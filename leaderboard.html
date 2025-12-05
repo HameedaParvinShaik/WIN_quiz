@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leaderboard — WIN CLUB</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+  /* --- Leaderboard Table FIX (purple theme + visible text) --- */
+
+/* ---- Leaderboard Table FINAL FIX ---- */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#board th, 
+#board td {
+  padding: 10px;
+  color: #fff !important;     
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.08);   /* very light translucent */
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+#board th {
+  background: rgba(255, 255, 255, 0.15);   /* header slightly brighter */
+  font-weight: 600;
+}
+
+
+  h1 {
+    color: #fff;
+    text-shadow: 1px 1px 3px #000;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  button {
+    margin-top: 18px;
+  }
+</style>
+
+<script type="module" src="leaderboard.js"></script>
+</head>
+
+<body>
+
+<header class="topbar">
+  🏆 WIN CLUB — Leaderboard
+</header>
+
+<main class="wrap">
+  <section class="card">
+    <h1>Top Scores</h1>
+
+    <table>
+      <tbody id="board">
+        <tr><td>Loading...</td></tr>
+      </tbody>
+    </table>
+
+    <button onclick="location.href='index.html'">🏠 Back to Home</button>
+  </section>
+</main>
+
+<footer class="foot">Good luck to all participants!</footer>
+
+</body>
+</html>
