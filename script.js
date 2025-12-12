@@ -36,10 +36,51 @@ const QLIST = [
 ];
 
 const REGISTERED = [
-  {"name":"Hameeda Parvin","email":"parvin.23mic7243@vitapstudent.ac.in"},
-  {"name":"Demo User 1","email":"demo1@example.com"},
-  {"name":"Demo User 2","email":"demo2@example.com"}
+  // Your original entries
+  { name: "Hameeda Parvin", email: "parvin.23mic7243@vitapstudent.ac.in" },
+  { name: "Demo User 1", email: "demo1@example.com" },
+  { name: "Demo User 2", email: "demo2@example.com" },
+
+  // Students (unique emails)
+  { name: "K Rohith", email: "rohith.25bcb7068@vitapstudent.ac.in" },
+  { name: "Duggirala Pradeepa", email: "pradeepa.24bce8289@vitapstudent.ac.in" },
+  { name: "Kotha Venakta Lakshmi Rakesh", email: "Rakesh.24mic7309@vitapstudent.ac.in" },
+  { name: "K Vanshika", email: "vanshika.24bca7564@vitapstudent.ac.in" },
+  { name: "P. Nandini", email: "nandini.24bce8542@vitapstudent.ac.in" },
+  { name: "Edupuganti Hanija", email: "hanija.22mic7206@vitapstudent.ac.in" },
+  { name: "Vikhyat Shajee Nambiar", email: "vikhyat.23bcb7137@gmail.com" },
+  { name: "Lekhana", email: "lekhana.25bce8522@vitapstudent.ac.in" },
+  { name: "V Raghu Vamsi", email: "raghuvamsi.24bce7891@vitapstudent.ac.in" },
+  { name: "Kanala Shyam Kumar Reddy", email: "Shyam.25bce7427@vitapstudent.ac.in" },
+  { name: "Pebbili Prasanna Laxmi", email: "laxmi.24bcd7100@vitapstudent.ac.in" },
+  { name: "Vaishnavi Bandaru", email: "vaishnavi.24bce8587@vitapstudent.ac.in" },
+  { name: "N Vyshnavi", email: "vyshnavi.24bcd7139@vitapstudent.ac.in" },
+  { name: "Harshini", email: "Harshini.25bbl7011@vitapstudent.ac.in" },
+  { name: "K. Daisy Sharon", email: "daisy.25bcc7075@vitapstudent.ac.in" },
+  { name: "G. Sree Varshitha", email: "varshitha.25bca7261@vitapstudent.ac.in" },
+  { name: "Vittala Indira", email: "indira.25bca7749@vitapstudent.ac.in" },
+  { name: "Madala Venkata Vardhani", email: "vardhani.25bca7380@vitapstudent.ac.in" },
+  { name: "Manideep Pothuri", email: "manideep.24bce8620@vitapstudent.ac.in" },
+  { name: "Yerragudi Sree Harshitha", email: "harshitha.25bma7014@vitapstudent.ac.in" },
+  { name: "R. Tirumala Seshasai", email: "seshasai.24mis7124@vitapstudent.ac.in" },
+  { name: "Ranak Chitiprolu", email: "ranak.24bca7088@vitapstudent.ac.in" },
+  { name: "Meet Nagariya", email: "meet.24bmr7025@vitapstudent.ac.in" },
+  { name: "Mahima Bino", email: "neethu.24bce7510@vitapstudent.ac.in" },
+  { name: "G. Jasmini", email: "jasmini.24bca7962@vitapstudent.ac.in" },
+  { name: "Padala Chandana Silpa", email: "chandana.24bca7033@vitapstudent.ac.in" },
+  { name: "L Hemalya", email: "hemalya.24bca7534@vitapstudent.ac.in" },
+  { name: "Raja Lineysha", email: "lineysha.24bcd7186@vitapstudent.ac.in" },
+  { name: "B. Navya Sri", email: "navya.24bce7542@vitapstudent.ac.in" },
+  { name: "Ramya Narayanapuram", email: "ramya.24bce8439@vitapstudent.ac.in" },
+  { name: "Gattamaneni Mohitha Sai", email: "mohitha.24bca8079@vitapstudent.ac.in" },
+  { name: "U. Himabindu", email: "bindu.24mis7298@vitapstudent.ac.in" },
+  { name: "Misba Fathima", email: "fathima.24bce8199@vitapstudent.ac.in" },
+  { name: "Sakya E", email: "Priyadarshini.24bce7850@vitapstudent.ac.in" },
+  { name: "J. Vineetha", email: "vineetha.23bce9319@vitapstudent.ac.in" },
+  { name: "Shaik Shabreen Mehak", email: "shabreen.24bce7522@vitapstudent.ac.in" },
+  { name: "John Samana", email: "john.23mic7290@vitapstudent.ac.in" }
 ];
+
 
 /* --------------------------
    STATE
