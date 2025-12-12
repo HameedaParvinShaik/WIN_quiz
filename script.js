@@ -8,41 +8,82 @@ import { addDoc, collection, getDocs, query, where } from "https://www.gstatic.c
 -------------------------- */
 
 const QLIST = [
-  // Women Cricket India
-  {"question":"Who is the current captain of the Indian Women's T20 team?","options":["Smriti Mandhana","Harmanpreet Kaur","Mithali Raj","Shafali Verma"],"answer":1},
-  {"question":"Which Indian woman cricketer scored the first double century in ODIs?","options":["Mithali Raj","Harmanpreet Kaur","Jhulan Goswami","Smriti Mandhana"],"answer":0},
-  {"question":"Who is known as the fastest bowler in Indian women's cricket?","options":["Jhulan Goswami","Poonam Yadav","Mansi Joshi","Ekta Bisht"],"answer":0},
-  {"question":"Which Indian woman cricketer is famous for a 171* innings against Australia in WC 2017?","options":["Harmanpreet Kaur","Mithali Raj","Smriti Mandhana","Deepti Sharma"],"answer":0},
-  {"question":"Who was the first captain of the Indian Women's cricket team?","options":["Mithali Raj","Shubhangi Kulkarni","Jhulan Goswami","Anjum Chopra"],"answer":1},
+  // 1
+  {"question":"Which Indian woman became the first Deputy Governor of RBI?","options":["Arundhati Bhattacharya","Usha Thorat","Naina Lal Kidwai","Kiran Mazumdar-Shaw"],"answer":1},
 
-  // Women Entrepreneurs / Startups
-  {"question":"Who founded Nykaa, a leading beauty brand in India?","options":["Vineeta Singh","Falguni Nayar","Richa Kar","Suchi Mukherjee"],"answer":1},
-  {"question":"Which entrepreneur started Zivame, an online lingerie store?","options":["Richa Kar","Falguni Nayar","Vineeta Singh","Shahnaz Husain"],"answer":0},
-  {"question":"Who co-founded the e-learning platform Vedantu?","options":["Vineeta Singh","Sameer Nigam","Vamsi Krishna","Aditi Agarwal"],"answer":2},
-  {"question":"Which sector is Falguni Nayar famous for?","options":["Fashion","Beauty & Cosmetics","Food & Beverages","Education"],"answer":1},
-  {"question":"Bootstrapping a startup means:","options":["Using investors' money","Using your own money","Crowdfunding","Bank loans"],"answer":1},
+  // 2
+  {"question":"Which state has India’s only floating national park?","options":["Assam","Manipur","Kerala","Goa"],"answer":1},
 
-  // Sports & Games
-  {"question":"Which country won the FIFA Women's World Cup 2019?","options":["USA","Germany","Netherlands","Brazil"],"answer":0},
-  {"question":"How many players are there in a basketball team on court?","options":["5","6","7","11"],"answer":0},
-  {"question":"Which sport uses a shuttlecock?","options":["Badminton","Tennis","Table Tennis","Squash"],"answer":0},
-  {"question":"Which Indian female athlete won gold at Tokyo 2020 in javelin throw?","options":["Dutee Chand","P. V. Sindhu","Neeraj Chopra","Neerja Birla"],"answer":2},
-  {"question":"The Indian women’s hockey team won their first Olympic medal in which year?","options":["2016","2020","2012","2008"],"answer":1},
+  // 3
+  {"question":"In cricket, which delivery is also known as a 'chinaman'?","options":["Left-arm googly","Carrom ball","Doosra","Knuckleball"],"answer":0},
 
-  // Knowledge / Trivia
-  {"question":"What is the capital of New Zealand?","options":["Auckland","Wellington","Christchurch","Hamilton"],"answer":1},
-  {"question":"Which planet is known as the Red Planet?","options":["Venus","Mars","Jupiter","Mercury"],"answer":1},
-  {"question":"Who wrote the book 'Lean In'?","options":["Sheryl Sandberg","Indra Nooyi","Kiran Mazumdar-Shaw","Melinda Gates"],"answer":0},
-  {"question":"Which chemical element has the symbol 'O'?","options":["Osmium","Oxygen","Gold","Silver"],"answer":1},
-  {"question":"The first woman to win a Nobel Prize was:","options":["Marie Curie","Rosalind Franklin","Ada Lovelace","Barbara McClintock"],"answer":0},
+  // 4
+  {"question":"Which Indian startup introduced the UPI app 'BharatPe'?","options":["Zeta","PhonePe","BharatPe","Razorpay"],"answer":2},
 
-  // Random / Mix
-  {"question":"Who is called the 'Iron Lady' of India?","options":["Indira Gandhi","Kiran Bedi","Kalpana Chawla","Mother Teresa"],"answer":0},
-  {"question":"Which Indian woman is known for space achievements?","options":["Kiran Mazumdar-Shaw","Kalpana Chawla","Indra Nooyi","Arundhati Bhattacharya"],"answer":1},
-  {"question":"Which board game uses knights, bishops, and pawns?","options":["Chess","Ludo","Carrom","Checkers"],"answer":0},
-  {"question":"What is the main ingredient in guacamole?","options":["Tomato","Avocado","Potato","Pepper"],"answer":1},
-  {"question":"Which Indian city is called the 'Pink City'?","options":["Jaipur","Jodhpur","Udaipur","Kochi"],"answer":0}
+  // 5
+  {"question":"Which ancient university is considered the oldest in India?","options":["Nalanda","Taxila","Vikramshila","Takshashila"],"answer":1},
+
+  // 6
+  {"question":"Which Indian woman scientist is known as the 'Missile Woman of India'?","options":["Tessy Thomas","Anuradha TK","Ritu Karidhal","Kalpana Chawla"],"answer":1},
+
+  // 7
+  {"question":"Which city is known as the Coffee Capital of India?","options":["Wayanad","Araku","Chikmagalur","Coorg"],"answer":3},
+
+  // 8
+  {"question":"Which sport includes the term 'drop shot'?","options":["Badminton","Tennis","Squash","All of these"],"answer":3},
+
+  // 9
+  {"question":"Which vitamin deficiency causes night blindness?","options":["Vitamin A","Vitamin B1","Vitamin C","Vitamin K"],"answer":0},
+
+  // 10
+  {"question":"Which Indian woman entrepreneur founded 'MamaEarth'?","options":["Ghazal Alagh","Falguni Nayar","Vineeta Singh","Suchi Mukherjee"],"answer":0},
+
+  // 11
+  {"question":"Which planet has the largest number of moons?","options":["Saturn","Jupiter","Neptune","Uranus"],"answer":0},
+
+  // 12
+  {"question":"Which Indian shuttler won the 2019 World Badminton Championship?","options":["Saina Nehwal","P.V. Sindhu","Ashwini Ponnappa","Jwala Gutta"],"answer":1},
+
+  // 13
+  {"question":"Where is the headquarters of ISRO located?","options":["Hyderabad","Chennai","Bengaluru","Thiruvananthapuram"],"answer":2},
+
+  // 14
+  {"question":"Which country introduced the concept of Zero?","options":["Greece","India","China","Egypt"],"answer":1},
+
+  // 15
+  {"question":"Which Indian woman became the CEO of IBM?","options":["Roshni Nadar","Arundhati Bhattacharya","Aruna Jayanthi","Ginni Rometty"],"answer":3},
+
+  // 16
+  {"question":"What is stored in a device’s cache memory?","options":["Frequently used data","Permanent files","Audio files","Large applications"],"answer":0},
+
+  // 17
+  {"question":"Which Indian city is known as the 'City of Lakes'?","options":["Udaipur","Bhopal","Hyderabad","Kolkata"],"answer":0},
+
+  // 18
+  {"question":"Which hormone regulates blood sugar?","options":["Insulin","Adrenaline","Thyroxine","Progesterone"],"answer":0},
+
+  // 19
+  {"question":"Which Indian woman was the first to win the Ramon Magsaysay Award?","options":["Aruna Roy","Mother Teresa","Kiran Bedi","Medha Patkar"],"answer":1},
+
+  // 20
+  {"question":"Which metal is used to make aircraft due to its light weight?","options":["Iron","Aluminium","Copper","Silver"],"answer":1},
+
+  // 21
+  {"question":"Which game has the positions 'setter', 'libero', and 'spiker'?","options":["Volleyball","Basketball","Baseball","Hockey"],"answer":0},
+
+  // 22
+  {"question":"Which country launched the world’s first artificial satellite?","options":["USA","France","Russia (USSR)","Japan"],"answer":2},
+
+  // 23
+  {"question":"Which Indian woman became the youngest CEO of a bank?","options":["Arundhati Bhattacharya","Chanda Kochhar","Naina Lal Kidwai","Aditi Gupta"],"answer":1},
+
+  // 24
+  {"question":"Which Indian city hosts the ‘International Film Festival of India’ (IFFI)?","options":["Mumbai","Goa","Chennai","Delhi"],"answer":1},
+
+  // 25
+  {"question":"Which gas is used in fire extinguishers?","options":["Oxygen","Carbon Dioxide","Nitrogen","Hydrogen"],"answer":1}
 ];
+
 
 
 const REGISTERED = [
