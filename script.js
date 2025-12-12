@@ -8,80 +8,131 @@ import { addDoc, collection, getDocs, query, where } from "https://www.gstatic.c
 -------------------------- */
 
 const QLIST = [
-  // 1
-  {"question":"Which Indian woman became the first Deputy Governor of RBI?","options":["Arundhati Bhattacharya","Usha Thorat","Naina Lal Kidwai","Kiran Mazumdar-Shaw"],"answer":1},
-
-  // 2
-  {"question":"Which state has India’s only floating national park?","options":["Assam","Manipur","Kerala","Goa"],"answer":1},
-
-  // 3
-  {"question":"In cricket, which delivery is also known as a 'chinaman'?","options":["Left-arm googly","Carrom ball","Doosra","Knuckleball"],"answer":0},
-
-  // 4
-  {"question":"Which Indian startup introduced the UPI app 'BharatPe'?","options":["Zeta","PhonePe","BharatPe","Razorpay"],"answer":2},
-
-  // 5
-  {"question":"Which ancient university is considered the oldest in India?","options":["Nalanda","Taxila","Vikramshila","Takshashila"],"answer":1},
-
-  // 6
-  {"question":"Which Indian woman scientist is known as the 'Missile Woman of India'?","options":["Tessy Thomas","Anuradha TK","Ritu Karidhal","Kalpana Chawla"],"answer":1},
-
-  // 7
-  {"question":"Which city is known as the Coffee Capital of India?","options":["Wayanad","Araku","Chikmagalur","Coorg"],"answer":3},
-
-  // 8
-  {"question":"Which sport includes the term 'drop shot'?","options":["Badminton","Tennis","Squash","All of these"],"answer":3},
-
-  // 9
-  {"question":"Which vitamin deficiency causes night blindness?","options":["Vitamin A","Vitamin B1","Vitamin C","Vitamin K"],"answer":0},
-
-  // 10
-  {"question":"Which Indian woman entrepreneur founded 'MamaEarth'?","options":["Ghazal Alagh","Falguni Nayar","Vineeta Singh","Suchi Mukherjee"],"answer":0},
-
-  // 11
-  {"question":"Which planet has the largest number of moons?","options":["Saturn","Jupiter","Neptune","Uranus"],"answer":0},
-
-  // 12
-  {"question":"Which Indian shuttler won the 2019 World Badminton Championship?","options":["Saina Nehwal","P.V. Sindhu","Ashwini Ponnappa","Jwala Gutta"],"answer":1},
-
-  // 13
-  {"question":"Where is the headquarters of ISRO located?","options":["Hyderabad","Chennai","Bengaluru","Thiruvananthapuram"],"answer":2},
-
-  // 14
-  {"question":"Which country introduced the concept of Zero?","options":["Greece","India","China","Egypt"],"answer":1},
-
-  // 15
-  {"question":"Which Indian woman became the CEO of IBM?","options":["Roshni Nadar","Arundhati Bhattacharya","Aruna Jayanthi","Ginni Rometty"],"answer":3},
-
-  // 16
-  {"question":"What is stored in a device’s cache memory?","options":["Frequently used data","Permanent files","Audio files","Large applications"],"answer":0},
-
-  // 17
-  {"question":"Which Indian city is known as the 'City of Lakes'?","options":["Udaipur","Bhopal","Hyderabad","Kolkata"],"answer":0},
-
-  // 18
-  {"question":"Which hormone regulates blood sugar?","options":["Insulin","Adrenaline","Thyroxine","Progesterone"],"answer":0},
-
-  // 19
-  {"question":"Which Indian woman was the first to win the Ramon Magsaysay Award?","options":["Aruna Roy","Mother Teresa","Kiran Bedi","Medha Patkar"],"answer":1},
-
-  // 20
-  {"question":"Which metal is used to make aircraft due to its light weight?","options":["Iron","Aluminium","Copper","Silver"],"answer":1},
-
-  // 21
-  {"question":"Which game has the positions 'setter', 'libero', and 'spiker'?","options":["Volleyball","Basketball","Baseball","Hockey"],"answer":0},
-
-  // 22
-  {"question":"Which country launched the world’s first artificial satellite?","options":["USA","France","Russia (USSR)","Japan"],"answer":2},
-
-  // 23
-  {"question":"Which Indian woman became the youngest CEO of a bank?","options":["Arundhati Bhattacharya","Chanda Kochhar","Naina Lal Kidwai","Aditi Gupta"],"answer":1},
-
-  // 24
-  {"question":"Which Indian city hosts the ‘International Film Festival of India’ (IFFI)?","options":["Mumbai","Goa","Chennai","Delhi"],"answer":1},
-
-  // 25
-  {"question":"Which gas is used in fire extinguishers?","options":["Oxygen","Carbon Dioxide","Nitrogen","Hydrogen"],"answer":1}
+  {
+    "question":"During the 2017 Women’s Cricket World Cup semifinal, one Indian batter played a historic unbeaten 171-run innings under intense pressure. Who was this player, often credited with changing the momentum of India’s campaign?",
+    "options":["Mithali Raj","Harmanpreet Kaur","Smriti Mandhana","Deepti Sharma"],
+    "answer":1
+  },
+  {
+    "question":"In international women’s cricket history, India’s first-ever ODI double century was scored by which legendary player, known for her calm captaincy and long-term consistency?",
+    "options":["Smriti Mandhana","Jhulan Goswami","Mithali Raj","Harmanpreet Kaur"],
+    "answer":2
+  },
+  {
+    "question":"Recognized as one of the fastest bowlers in women's cricket, which Indian pacer is known for her exceptional height, speed, and wicket-taking ability over two decades?",
+    "options":["Poonam Yadav","Jhulan Goswami","Mansi Joshi","Ekta Bisht"],
+    "answer":1
+  },
+  {
+    "question":"Nykaa, a multibillion-dollar beauty and skincare marketplace, was built by which woman entrepreneur who transitioned from a high-profile banking career to launch her own startup?",
+    "options":["Vineeta Singh","Falguni Nayar","Richa Kar","Suchi Mukherjee"],
+    "answer":1
+  },
+  {
+    "question":"Zivame, India’s first major online lingerie platform, was founded after the entrepreneur identified the discomfort women face while shopping offline. Who created this brand?",
+    "options":["Falguni Nayar","Richa Kar","Vineeta Singh","Shahnaz Husain"],
+    "answer":1
+  },
+  {
+    "question":"Bootstrapping a company is a strategy where the founders do not rely on investors. Which option correctly explains this concept in startup funding?",
+    "options":["Using venture capital only","Using your personal or internal business funds","Taking large bank loans","Crowdfunding with the public"],
+    "answer":1
+  },
+  {
+    "question":"In the 2019 FIFA Women’s World Cup, the champion team displayed exceptional dominance with world-class forwards and midfielders. Which nation lifted the trophy that year?",
+    "options":["Germany","Netherlands","Brazil","USA"],
+    "answer":3
+  },
+  {
+    "question":"While discussing Olympic achievements, which of the following Indian female athletes is celebrated for winning multiple medals at world events, especially famous for her Tokyo 2020 performance in badminton?",
+    "options":["Hima Das","P. V. Sindhu","Dutee Chand","Rani Rampal"],
+    "answer":1
+  },
+  {
+    "question":"Known for her contributions to STEM inspiration globally, which Indian-origin astronaut tragically lost her life during the Columbia Space Shuttle mission but continues to inspire millions?",
+    "options":["Kalpana Chawla","Sunita Williams","Tessy Thomas","Indra Nooyi"],
+    "answer":0
+  },
+  {
+    "question":"Which city, known for its distinct pink-colored architecture and historical heritage, is popularly referred to as the ‘Pink City’ of India?",
+    "options":["Jodhpur","Kochi","Jaipur","Udaipur"],
+    "answer":2
+  },
+  {
+    "question":"Lean In is a globally influential book encouraging women to pursue leadership roles and overcome workplace barriers. Who authored this bestselling work?",
+    "options":["Indra Nooyi","Sheryl Sandberg","Melinda Gates","Sudha Murthy"],
+    "answer":1
+  },
+  {
+    "question":"Marie Curie, a pioneering scientist, became the first woman ever to win a Nobel Prize. In which scientific area did she make her earliest breakthrough discoveries?",
+    "options":["Mathematics","Biology","Physics & Chemistry","Computer Science"],
+    "answer":2
+  },
+  {
+    "question":"Which Indian women's cricket captain, known for exceptional leadership and consistency, is widely regarded as the longest-serving leader of the national team?",
+    "options":["Mithali Raj","Harmanpreet Kaur","Anjum Chopra","Shubhangi Kulkarni"],
+    "answer":0
+  },
+  {
+    "question":"Which Indian woman entrepreneur is associated with building a leading premium chocolate brand after transitioning from a career in fitness and finance?",
+    "options":["Vineeta Singh","Falguni Nayar","Neha Narkhede","Suchi Mukherjee"],
+    "answer":0
+  },
+  {
+    "question":"In badminton, players strike a feathered projectile unique to the sport. What is the name of this projectile used in professional play?",
+    "options":["Tennis ball","Shuttlecock","Ping pong ball","Squash ball"],
+    "answer":1
+  },
+  {
+    "question":"Which city serves as the capital of New Zealand and is known for its political, cultural, and film production significance?",
+    "options":["Auckland","Hamilton","Wellington","Christchurch"],
+    "answer":2
+  },
+  {
+    "question":"Known as the 'Iron Lady of India' for her strong political decisions and leadership style, who earned this title in modern Indian history?",
+    "options":["Kiran Bedi","Mother Teresa","Kalpana Chawla","Indira Gandhi"],
+    "answer":3
+  },
+  {
+    "question":"Which Indian women’s hockey team milestone is remembered for marking their strongest Olympic finish in many years during the Tokyo 2020 Games?",
+    "options":["First-ever Olympic qualification","First Olympic gold","First Olympic bronze","Fourth-place finish after a close semifinal"],
+    "answer":3
+  },
+  {
+    "question":"Which Indian women's cricket legend became the first to surpass 10,000 runs in international cricket across formats?",
+    "options":["Smriti Mandhana","Harmanpreet Kaur","Mithali Raj","Punam Raut"],
+    "answer":2
+  },
+  {
+    "question":"Which element with the symbol 'O' is essential for respiration and constitutes a major part of Earth’s atmosphere?",
+    "options":["Osmium","Oxygen","Ozone","Oxalate"],
+    "answer":1
+  },
+  {
+    "question":"Guacamole, a popular dip from Mexican cuisine, is primarily made using which creamy green fruit known for its healthy fats?",
+    "options":["Avocado","Tomato","Pepper","Potato"],
+    "answer":0
+  },
+  {
+    "question":"Which Indian cricketer became a global youth icon after her explosive batting as a teenager, especially known for her fearless T20 style?",
+    "options":["Smriti Mandhana","Shafali Verma","Deepti Sharma","Jemimah Rodrigues"],
+    "answer":1
+  },
+  {
+    "question":"Recognized as India’s first woman IPS officer, who became known for her strict discipline, reforms in policing, and strong administrative presence?",
+    "options":["Chhavi Rajawat","Indira Gandhi","Kiran Bedi","Irom Sharmila"],
+    "answer":2
+  },
+  {
+    "question":"Chess, a strategic board game with centuries of history, includes pieces such as rooks, bishops, and pawns. Which piece moves in an ‘L’ shape?",
+    "options":["Queen","Rook","Knight","Bishop"],
+    "answer":2
+  },
+  {
+    "question":"Which entrepreneur is credited for starting India’s first major online beauty discovery platform long before it became a billion-dollar industry?",
+    "options":["Falguni Nayar","Suchi Mukherjee","Vineeta Singh","Richa Kar"],
+    "answer":0
+  }
 ];
 
 
