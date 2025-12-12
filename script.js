@@ -8,32 +8,42 @@ import { addDoc, collection, getDocs, query, where } from "https://www.gstatic.c
 -------------------------- */
 
 const QLIST = [
-  {"question":"What is a main challenge women entrepreneurs face?","options":["Lack of IT skills","Work-life balance","Limited finance access","Avoiding marketing"],"answer":2},
-  {"question":"A business created mainly to support the owner’s lifestyle is called?","options":["High-growth","Innovation-driven","Lifestyle business","Venture-backed"],"answer":2},
-  {"question":"Which barrier is similar to the corporate ‘glass ceiling’?","options":["Plastic floor","Brick wall","Funding gap","Silver lining"],"answer":2},
-  {"question":"Which US agency supports small businesses, including women-owned ones?","options":["Commerce Dept","Federal Reserve","SBA","NWBC"],"answer":2},
-  {"question":"Which is NOT one of the 4 Ps of marketing?","options":["Product","Price","People","Promotion"],"answer":2},
-  {"question":"Which funding gives ownership in exchange for money?","options":["Debt","Equity","Crowdfunding","Bootstrapping"],"answer":1},
-  {"question":"Using your own money to start a business is called?","options":["Debt leverage","Franchising","Angel investing","Bootstrapping"],"answer":3},
-  {"question":"In SWOT, which are internal factors?","options":["Strengths & Opportunities","Strengths & Weaknesses","Weaknesses & Threats","Opportunities & Threats"],"answer":1},
-  {"question":"Which structure gives no liability protection?","options":["Partnership","LLC","C-Corp","Sole Proprietorship"],"answer":3},
-  {"question":"What outlines business goals and strategies?","options":["Mission","Business plan","Brochure","NDA"],"answer":1},
-  {"question":"Which sector has many women-owned businesses?","options":["Construction","Technology","Healthcare","Oil & Gas"],"answer":2},
-  {"question":"Micro-loans help mainly whom?","options":["Big firms","Developed nations","Women in developing countries","Govt agencies"],"answer":2},
-  {"question":"Women leaders are often associated with which style?","options":["Autocratic","Transactional","Transformational","Laissez-faire"],"answer":2},
-  {"question":"Which barrier comes from cultural bias?","options":["Networking issues","No mentors","Gender bias by investors","High taxes"],"answer":2},
-  {"question":"What does a USP explain?","options":["Year-1 revenue","Target users","What makes you unique","Sourcing policy"],"answer":2},
-  {"question":"A common govt support for women entrepreneurs is?","options":["Board quotas","Import rights","Training programs","Product bans"],"answer":2},
-  {"question":"Who founded Goop?","options":["Reese Witherspoon","Jessica Alba","Gwyneth Paltrow","Jennifer Garner"],"answer":2},
-  {"question":"Who founded The Body Shop?","options":["L'Oréal","Sephora","The Body Shop","Lush"],"answer":2},
-  {"question":"Women often report less confidence in which area?","options":["Marketing","HR","Finance","Design"],"answer":2},
-  {"question":"What is the term for a new business with innovative ideas?","options":["Small shop","Startup","Franchise","Retail chain"],"answer":1},
-  {"question":"Which type of investor funds startups early?","options":["Angel investor","Bank","Customer","Supplier"],"answer":0},
-  {"question":"What is market segmentation?","options":["Setting prices","Finding competitors","Dividing customers into groups","Paying suppliers"],"answer":2},
-  {"question":"Which document protects business ideas when shared?","options":["Contract","NDA","Invoice","License"],"answer":1},
-  {"question":"Which skill is key for entrepreneurs?","options":["Public speaking","Coding","Risk-taking","Time pass"],"answer":2},
-  {"question":"Which term means ‘taking a business online’?","options":["Digitization","Globalization","Branding","Sponsoring"],"answer":0}
+  // Women Cricket India
+  {"question":"Who is the current captain of the Indian Women's T20 team?","options":["Smriti Mandhana","Harmanpreet Kaur","Mithali Raj","Shafali Verma"],"answer":1},
+  {"question":"Which Indian woman cricketer scored the first double century in ODIs?","options":["Mithali Raj","Harmanpreet Kaur","Jhulan Goswami","Smriti Mandhana"],"answer":0},
+  {"question":"Who is known as the fastest bowler in Indian women's cricket?","options":["Jhulan Goswami","Poonam Yadav","Mansi Joshi","Ekta Bisht"],"answer":0},
+  {"question":"Which Indian woman cricketer is famous for a 171* innings against Australia in WC 2017?","options":["Harmanpreet Kaur","Mithali Raj","Smriti Mandhana","Deepti Sharma"],"answer":0},
+  {"question":"Who was the first captain of the Indian Women's cricket team?","options":["Mithali Raj","Shubhangi Kulkarni","Jhulan Goswami","Anjum Chopra"],"answer":1},
+
+  // Women Entrepreneurs / Startups
+  {"question":"Who founded Nykaa, a leading beauty brand in India?","options":["Vineeta Singh","Falguni Nayar","Richa Kar","Suchi Mukherjee"],"answer":1},
+  {"question":"Which entrepreneur started Zivame, an online lingerie store?","options":["Richa Kar","Falguni Nayar","Vineeta Singh","Shahnaz Husain"],"answer":0},
+  {"question":"Who co-founded the e-learning platform Vedantu?","options":["Vineeta Singh","Sameer Nigam","Vamsi Krishna","Aditi Agarwal"],"answer":2},
+  {"question":"Which sector is Falguni Nayar famous for?","options":["Fashion","Beauty & Cosmetics","Food & Beverages","Education"],"answer":1},
+  {"question":"Bootstrapping a startup means:","options":["Using investors' money","Using your own money","Crowdfunding","Bank loans"],"answer":1},
+
+  // Sports & Games
+  {"question":"Which country won the FIFA Women's World Cup 2019?","options":["USA","Germany","Netherlands","Brazil"],"answer":0},
+  {"question":"How many players are there in a basketball team on court?","options":["5","6","7","11"],"answer":0},
+  {"question":"Which sport uses a shuttlecock?","options":["Badminton","Tennis","Table Tennis","Squash"],"answer":0},
+  {"question":"Which Indian female athlete won gold at Tokyo 2020 in javelin throw?","options":["Dutee Chand","P. V. Sindhu","Neeraj Chopra","Neerja Birla"],"answer":2},
+  {"question":"The Indian women’s hockey team won their first Olympic medal in which year?","options":["2016","2020","2012","2008"],"answer":1},
+
+  // Knowledge / Trivia
+  {"question":"What is the capital of New Zealand?","options":["Auckland","Wellington","Christchurch","Hamilton"],"answer":1},
+  {"question":"Which planet is known as the Red Planet?","options":["Venus","Mars","Jupiter","Mercury"],"answer":1},
+  {"question":"Who wrote the book 'Lean In'?","options":["Sheryl Sandberg","Indra Nooyi","Kiran Mazumdar-Shaw","Melinda Gates"],"answer":0},
+  {"question":"Which chemical element has the symbol 'O'?","options":["Osmium","Oxygen","Gold","Silver"],"answer":1},
+  {"question":"The first woman to win a Nobel Prize was:","options":["Marie Curie","Rosalind Franklin","Ada Lovelace","Barbara McClintock"],"answer":0},
+
+  // Random / Mix
+  {"question":"Who is called the 'Iron Lady' of India?","options":["Indira Gandhi","Kiran Bedi","Kalpana Chawla","Mother Teresa"],"answer":0},
+  {"question":"Which Indian woman is known for space achievements?","options":["Kiran Mazumdar-Shaw","Kalpana Chawla","Indra Nooyi","Arundhati Bhattacharya"],"answer":1},
+  {"question":"Which board game uses knights, bishops, and pawns?","options":["Chess","Ludo","Carrom","Checkers"],"answer":0},
+  {"question":"What is the main ingredient in guacamole?","options":["Tomato","Avocado","Potato","Pepper"],"answer":1},
+  {"question":"Which Indian city is called the 'Pink City'?","options":["Jaipur","Jodhpur","Udaipur","Kochi"],"answer":0}
 ];
+
 
 const REGISTERED = [
   // Your original entries
