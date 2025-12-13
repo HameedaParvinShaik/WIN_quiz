@@ -140,8 +140,16 @@ const QLIST = [
 const REGISTERED = [
   // Your original entries
   { name: "Hameeda Parvin", email: "parvin.23mic7243@vitapstudent.ac.in" },
-  { name: "Demo User 1", email: "demo1@example.com" },
-  { name: "Demo User 2", email: "demo2@example.com" },
+  { name: "Demo User 1", email: "user1@example.com" },
+  { name: "Demo User 2", email: "user2@example.com" },
+    { name: "Demo User 3", email: "user3@example.com" },
+  { name: "Demo User 4", email: "duser4@example.com" },
+    { name: "Demo User 5", email: "user5@example.com" },
+  { name: "Demo User 6", email: "user6@example.com" },
+    { name: "Demo User 7", email: "user7@example.com" },
+  { name: "Demo User 8", email: "user8@example.com" },
+    { name: "Demo User 9", email: "user9@example.com" },
+  { name: "Demo User 10", email: "user10@example.com" },
 
   // Students (unique emails)
   { name: "K Rohith", email: "rohith.25bcb7068@vitapstudent.ac.in" },
